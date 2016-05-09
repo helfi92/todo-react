@@ -13,7 +13,7 @@ class ToDoList extends Component {
 			return <ToDoItem key={item} item={item} />
 		});
 		return (
-			<div className="col-md-10">
+			<div className="col-md-9">
 				<div>{items}</div>
 			</div>
 

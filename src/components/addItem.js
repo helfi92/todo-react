@@ -2,24 +2,45 @@ import React, { Component } from 'react';
 
 class AddItem extends Component {
 	
-	addNewItem() {
-	  	alert('item click');
-	  	// let updated_list = this.state.data;
-	  	// updated_list.push("New Todo");
-	  	// this.setState({data : updated_list});
-  	}
+	constructor(props){
+		super(props);
+		this.state = {
+			task : ''
+		};
+		this.onInputChange = this.onInputChange.bind(this);
+		this.addNewItem = this.addNewItem.bind(this);
+	}
 
 	render() {
 		return (
-			<div className="col-md-2">
-
-				<div>
-					<button onClick={this.addNewItem} className="btn btn-primary add-item">New Item</button>
+			<div className="col-md-3">
+				<div className="add-item-container">
+					<span><input placeholder="todo task" value={this.state.task} onChange={this.onInputChange} /></span>
+					<span><button className="btn btn-primary add-item" onClick={this.addNewItem}>add</button></span>
 				</div>
 
 			</div>
 		)
 	}
+
+	onInputChange(event){
+		this.setState({task : event.target.value});
+	}
+
+
+	addNewItem() {
+	  	console.log('new task: ', this.state.task );
+	  	console.log('list: ', this.props.data );
+
+	  	let task = this.state.task;
+
+	  	let updated_list = this.props.data;
+	  	updated_list = updated_list.concat(task);
+	  	this.props.onItemAdd(updated_list);
+	  	//	Clear input
+	  	this.setState({task : ''});
+  	
+  	}
 }
 
 export default AddItem;
