@@ -5,16 +5,16 @@ import ToDoItem from './todoItem';
 class ToDoList extends Component {
 
 	constructor(props) {
-		super(props)
-		
+		super(props)	
 	}
+
 	render() {
 		const items = this.props.data.map((item) => {
 			return <ToDoItem key={item} item={item} />
 		});
 		return (
-			<div>
-				{items}
+			<div className="col-md-10">
+				<div>{items}</div>
 			</div>
 
 		);	

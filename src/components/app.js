@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 import ToDoList from './todoList';
+import AddItem from './addItem';
 
 export default class App extends Component {
   constructor(props) {
@@ -11,11 +12,17 @@ export default class App extends Component {
   		data : list
   	}
   }
+  
+  
+
   render() {
     return (
-      <div>React simple starter
+      <div>
       	<ToDoList data={this.state.data} />
+      	<AddItem />
       </div>
     );
   }
+
+  
 }

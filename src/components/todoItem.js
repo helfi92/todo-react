@@ -6,7 +6,7 @@ class ToDoItem extends Component{
 
 	render(){
 		return (
-			<div>
+			<div className="list-item">
 				{this.props.item}
 			</div>
 		)

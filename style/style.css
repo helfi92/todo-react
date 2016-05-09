@@ -1,0 +1,13 @@
+.list-item{
+	padding: 1em;
+	background-color: #ddd;
+	text-align: center;
+	margin: 0.5em;
+}
+.list-item:hover{
+	cursor: pointer;
+}
+.add-item{
+	text-align: center;
+	margin: 0.5em;
+}
