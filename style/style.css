@@ -1,3 +1,19 @@
+/*
+
+Button's 
+
+*/
+button.add-item{
+	margin-top:5px;
+}
+
+
+/*
+
+Other
+
+*/
+
 .list-item{
 	padding: 1em;
 	background-color: #ddd;
@@ -7,7 +23,14 @@
 .list-item:hover{
 	cursor: pointer;
 }
+
 .add-item{
 	text-align: center;
-	margin: 0.5em;
+}
+input{
+	padding-left: 1em;
+	margin-top:0.5em;
+}
+.add-item-container > span { 
+	float:right;
 }

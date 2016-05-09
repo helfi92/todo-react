@@ -28,16 +28,18 @@ class AddItem extends Component {
 	}
 
 
+	/*
+
+	This method performs the logic of adding a new todo to the existing list
+	This method will clear the task input after submitting the new list
+
+	*/
 	addNewItem() {
-	  	console.log('new task: ', this.state.task );
-	  	console.log('list: ', this.props.data );
-
 	  	let task = this.state.task;
-
 	  	let updated_list = this.props.data;
+	  	
 	  	updated_list = updated_list.concat(task);
 	  	this.props.onItemAdd(updated_list);
-	  	//	Clear input
 	  	this.setState({task : ''});
   	
   	}
