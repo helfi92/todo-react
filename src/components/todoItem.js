@@ -7,7 +7,7 @@ class ToDoItem extends Component{
 	render(){
 		return (
 			<div>
-				ToDoItem
+				{this.props.item}
 			</div>
 		)
 	}
